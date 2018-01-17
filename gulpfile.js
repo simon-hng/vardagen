@@ -17,8 +17,6 @@ gulp.task('less', function() {
       .pipe(cssmin())
       .pipe(rename({suffix: '.min'}))
       .pipe(gulp.dest('dist/css'));
-      
-      
   });
 
   gulp.task('watch', ['browserSync'], function (){
