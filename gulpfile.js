@@ -7,7 +7,7 @@ let cssmin = require('gulp-cssmin');
 let rename = require('gulp-rename');
 
 gulp.task('less', function() {
-    return gulp.src('app/less/styles.less') // Gets all files ending with .scss in app/scss
+    return gulp.src('app/less/**/*.less') // Gets all files ending with .scss in app/scss
       .pipe(less({
           plugins: [autoprefixPlugin]
       }))
