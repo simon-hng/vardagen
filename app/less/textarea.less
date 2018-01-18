@@ -1,8 +1,15 @@
 .textarea {
     background: transparent;
-    padding: 0;
+    padding: 7.5px 0;
     width: 100%;
+    height: 130px; //requires better solution
     border: none;
     border-bottom: solid 2px #ffffff;
     resize: none;
+    font-size: @fontSmall;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: #ffffff;
+    }
 }
