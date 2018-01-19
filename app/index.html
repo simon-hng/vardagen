@@ -11,9 +11,8 @@
 
 <body>
     <header class="header">
-        <div class="header__item logo">
-            <h2 class="logo__h2">Company Name</h2>
-        </div>
+        <h2 class="header__item logo">Company Name</h2>
+        <input type="checkbox" class="menu-checkbox" id="menu-toggle">
         <label for="menu-toggle" class="menu-toggle">
             <div class="burger">
                 <span class="burger__layer"></span>
@@ -21,7 +20,6 @@
                 <span class="burger__layer"></span>
             </div>
         </label>
-        <input type="checkbox" class="menu-checkbox" id="menu-toggle">
         <nav class="header__item menu">
             <a class="menu__item">Home</a>
             <a class="menu__item">About Us</a>
@@ -61,22 +59,27 @@
             <div class="timeline__line">
             </div>
             <div class="event">
-                <a class="event__item event__item--00">
+                <a class="event__item">
                     <p class="event__date">2003</p>
                     <div class="event__circle"></div>
                     <p class="event__text">Started</p>
                 </a>
-                <a class="event__item event__item--05">
+            <a class="event__section--04"></a>
+            <a class="event__section--01"></a>
+                <a class="event__item">
                     <p class="event__date">2008</p>
                     <div class="event__circle"></div>
                     <p class="event__text">Important Date One</p>
                 </a>
-                <a class="event__item event__item--07">
+            <a class="event__section--02"></a>
+                <a class="event__item">
                     <p class="event__date">2010</p>
                     <div class="event__circle"></div>
                     <p class="event__text">Important Date Two</p>
                 </a>
-                <a class="event__item event__item--13">
+            <a class="event__section--04"></a>
+            <a class="event__section--02"></a>
+                <a class="event__item">
                     <p class="event__date">2016</p>
                     <div class="event__circle"></div>
                     <p class="event__text">Current Time</p>
@@ -171,7 +174,7 @@
                 width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
     </article>
-
+    <script src="js/menu.js"></script>
 </body>
 
 </html>
