@@ -1,0 +1,39 @@
+.event {
+    display: flex;
+    padding: 0 10%;
+    @media (min-width: 768px) {
+        flex-direction: column;
+        height: 37.5vw;
+    }
+    &__item {
+        font-family: 'Roboto', sans-serif;
+        font-size: @fontSmall;
+        padding-right: 20px;
+        @media (min-width: 768px) {
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+    }
+    &__circle {
+        width: 10px;
+        height: 10px;
+        border: solid 2px #8f8f8f;
+        border-radius: 50%;
+        position: relative;
+        top: 0;
+        background: white;
+    }
+    &__text, &__date {
+        @media (min-width: 768px) {
+            width: 40%;
+            margin: 0 10px;;
+        }
+    }
+    &__date {
+        color: #8f8f8f;
+        @media (min-width: 768px) {
+            text-align: right;
+        }
+    }
+}
