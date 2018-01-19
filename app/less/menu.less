@@ -2,11 +2,12 @@
 .menu {
     position: absolute;
     background: #ffffff;
-    width: 90%;
+    width: 200vw;
     padding: 0 5% 15px;
-    left: 0;
-    top: -100vh;
+    right: -100vw;
+    top: 48px;
     transition-duration: 0.5s;
+    opacity: 0;
 
     @media (min-width: 1024px) {
         text-align: right;
@@ -28,7 +29,8 @@
         position: absolute;
         left: -9999px;
         &:checked ~ nav {
-            top: 48px;
+            right: 0;
+            opacity: 1;
         }
     }
     &__item {
