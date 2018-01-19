@@ -6,11 +6,22 @@
     left: 0;
     top: -100vh;
     transition-duration: 0.5s;
-    z-index: 80;
+
+    @media (min-width: 1024px) {
+        text-align: right;
+        position: relative;
+        white-space: nowrap;
+        padding: 0;
+        top: 0;
+    }
     &-toggle {
         display: flex;
         flex-direction: column;
         justify-content: center;
+
+        @media (min-width: 1024px) {
+            display: none;
+        }
     }
     &-checkbox {
         position: absolute;
@@ -25,5 +36,10 @@
         .fontStyle;
         font-size: @fontMedium;
         margin-bottom: 2px;
+
+        @media (min-width: 1024px) {
+            display: inline-block;
+            margin: 0 5px
+        }
     }
 }
