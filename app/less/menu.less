@@ -1,3 +1,25 @@
 .menu {
-    display: none;
+    position: absolute;
+    background: #ffffff;
+    width: 100%;
+    padding: 0 5% 15px;
+    right: -9999px;
+    top: 48px;
+    &__item {
+        display: block;
+        text-align: right;
+        font-family: 'Roboto', sans-serif;
+        font-size: @fontMedium;
+        font-weight: lighter;
+        margin-bottom: 2px;
+    }
 }
+
+.menu-checkbox {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    &:checked ~ nav {
+        right: 0;
+    }
+};
