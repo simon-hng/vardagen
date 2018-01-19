@@ -1,16 +1,18 @@
 .header {
-    display: flex;
     position: fixed;
+    display: flex;
     top: 0;
-    background: #ffffff;
     padding: 15px 5%;
     width: 90%;
+    background: #ffffff;
     z-index: 100;
-    @media (min-width: 1024px){
-        width: 80%;
-        padding: 25px 10%;
+
+    &__item {
+        flex: 1 50%;
     }
-}
-.header__item {
-    flex: 1 50%;
+
+    @media (min-width: 1024px){
+        padding: 25px 10%;
+        width: 80%;
+    }
 }

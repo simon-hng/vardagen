@@ -1,17 +1,18 @@
 .square {
     width: 100vw;
-    //desktop version dimensions 50%/50%
+
     &__inner {
         margin: 10%;
         @media (min-width: 768px){
             margin: 20%;
         }
     }
+
     &--black {
         background: #000000;
         color: #ffffff;
     }
-    //need better solution for larger screens
+
     @media (min-width: 768px){
         width: 50vw;
         height: 50vw;

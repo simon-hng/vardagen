@@ -2,82 +2,88 @@
 @timespan: 13;
 
 .event {
+    position: relative;
     display: flex;
     padding: 0 10%;
-    position: relative;
 
     @media (min-width: 768px) {
-        flex-direction: column;
-        height: 60%;
         padding-top: 20%;
+        height: 60%;
+        flex-direction: column;
     }
 
     &::before{
         content:"";
-        width: 100%;
-        border-bottom: solid 2px #8f8f8f;
-        height: 46px;
         position: absolute;
         left: 0;
+        border-bottom: solid 2px #8f8f8f;
+        width: 100%;
+        height: 46px;
 
         @media (min-width: 768px) {
-            width: 49.7%;
+            top: 0;
             border-right: solid 3px #8f8f8f;
             border-bottom: none;
+            width: 49.7%;
             height: 100%;
-            top: 0;
         }
     }
+
     &__section {
         &--01 {
             height: 1/@timespan*100%;
         }
+
         &--02 {
             height: 2/@timespan*100%;
         }
+
         &--04 {
             height: 4/@timespan*100%;
         }
-        
-
     }
+
     &__item {
-        .fontStyle;
-        font-family: 'Roboto', sans-serif;
-        font-size: @fontSmall;
         padding-right: 20px;
+        font-size: @fontSmall;
+        .fontStyle;
         align-items: center;
 
         @media (min-width: 768px) {
             display: flex;
-            width: 100%;
-            justify-content: center;
             padding: 5px 0;
+            width: 100%;
             height: 1/@timespan*100%;
+            justify-content: center;
             background: #ffffff;
             z-index: 10;
         }
     }
+
     &__circle {
-        width: 10px;
-        height: 10px;
-        border: solid 2px #8f8f8f;
-        border-radius: 50%;
         position: relative;
         top: 0;
+        border: solid 2px #8f8f8f;
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
         background: #ffffff;
+
         @media (min-width: 768px) {
             border: solid 3px #8f8f8f;
         }
     }
+
     &__text, &__date {
         @media (min-width: 768px) {
+            margin: 0 10px;
             width: 40%;
-            margin: 0 10px;;
         }
     }
+
     &__date {
         color: #8f8f8f;
+
         @media (min-width: 768px) {
             text-align: right;
         }

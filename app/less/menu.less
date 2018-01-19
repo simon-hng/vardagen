@@ -1,21 +1,22 @@
 //TODO: z-index is wrong, menu goes over header rn.
 .menu {
     position: absolute;
-    background: #ffffff;
-    width: 200vw;
-    padding: 0 5% 15px;
     right: -100vw;
     top: 48px;
+    padding: 0 5% 15px;
+    width: 200vw;
+    background: #ffffff;
     transition-duration: 0.5s;
     opacity: 0;
 
     @media (min-width: 1024px) {
-        text-align: right;
         position: relative;
-        white-space: nowrap;
-        padding: 0;
         top: 0;
+        padding: 0;
+        text-align: right;
+        white-space: nowrap;
     }
+
     &-toggle {
         display: flex;
         flex-direction: column;
@@ -25,6 +26,7 @@
             display: none;
         }
     }
+
     &-checkbox {
         position: absolute;
         left: -9999px;
@@ -33,12 +35,13 @@
             opacity: 1;
         }
     }
+
     &__item {
         display: block;
-        text-align: right;
-        .fontStyle;
-        font-size: @fontMedium;
         margin-bottom: 2px;
+        font-size: @fontMedium;
+        .fontStyle;
+        text-align: right;
 
         @media (min-width: 1024px) {
             display: inline-block;
