@@ -1,19 +1,36 @@
 .event {
     display: flex;
     padding: 0 10%;
+    position: relative;
     @media (min-width: 768px) {
         flex-direction: column;
-        height: 37.5vw;
+        height: 30vw;
+        margin-top: 7.5vw;
     }
     &__item {
         .fontStyle;
         font-family: 'Roboto', sans-serif;
         font-size: @fontSmall;
         padding-right: 20px;
+
         @media (min-width: 768px) {
             display: flex;
+            width: 80%;
             justify-content: center;
             padding: 0;
+            position: absolute;
+            &--00 {
+                top: 0;
+            }
+            &--05 {
+                top: 5/13*100%;
+            }
+            &--07 {
+                top: 7/13*100%;
+            }
+            &--13 {
+                top: 100%;
+            }
         }
     }
     &__circle {
