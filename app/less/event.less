@@ -1,5 +1,5 @@
-//TODO: timeline too small when screen-width > 1024px
-@timespan: 13;
+//timespan is actually all years that are present in timeline. E.g. 2000-2010 would have a timespan of 11
+@timespan: 14;
 
 .event {
     position: relative;
@@ -30,6 +30,7 @@
     }
 
     &__section {
+        //adds blank spaces between events. The numbers are space-sizes in years. Add them to build non present spaces. E.g. 05 = 04+01
         &--01 {
             height: 1/@timespan*100%;
         }
