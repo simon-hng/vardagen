@@ -32,9 +32,24 @@
     &-checkbox {
         position: absolute;
         left: -9999px;
-        &:checked ~ nav {
-            right: 0;
-            opacity: 1;
+        &:checked {
+            &~ nav {
+                right: 0;
+                opacity: 1;
+            }
+            &~ .burger {
+                & span:nth-child(1) {
+                    top: 5px;
+                    transform: rotate(45deg);
+                }
+                & span:nth-child(2) {
+                    opacity: 0;
+                }
+                & span:nth-child(3) {
+                    top: 5px;
+                    transform: rotate(-45deg);
+                }
+            }
         }
     }
 
