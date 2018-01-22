@@ -16,13 +16,13 @@
         content:"";
         position: absolute;
         left: 0;
-        border-bottom: solid 2px #8f8f8f;
+        border-bottom: solid 2px @darkGrey;
         width: 100%;
         height: 46px;
 
         @media (min-width: 768px) {
             top: 0;
-            border-right: solid 3px #8f8f8f;
+            border-right: solid 3px @darkGrey;
             border-bottom: none;
             width: 49.7%;
             height: 100%;
@@ -48,14 +48,14 @@
     &__circle {
         position: relative;
         top: 0;
-        border: solid 2px #8f8f8f;
+        border: solid 2px @darkGrey;
         border-radius: 50%;
         width: 10px;
         height: 10px;
         background: #ffffff;
         
         @media (min-width: 768px) {
-            border: solid 3px #8f8f8f;
+            border: solid 3px @darkGrey;
         }
     }
     
@@ -67,7 +67,7 @@
     }
     
     &__date {
-        color: #8f8f8f;
+        color: @darkGrey;
         
         @media (min-width: 768px) {
             text-align: right;
