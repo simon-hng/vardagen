@@ -53,6 +53,7 @@
         width: 10px;
         height: 10px;
         background: #ffffff;
+        transition: 0.25s;
         
         @media (min-width: 768px) {
             border: solid 3px @darkGrey;
@@ -79,10 +80,18 @@
     }
     &__item {
         padding-right: 20px;
-        font-size: @fontSmall;
+        font-size: @fontSmall; 
         .fontStyle;
         align-items: center;
 
+        &:hover {
+            cursor: pointer;
+    
+            & > .event__circle {
+                box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.16);
+            }
+
+        }
         @media (min-width: 768px) {
             display: flex;
             padding: 5px 0;
