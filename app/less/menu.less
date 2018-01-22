@@ -1,7 +1,7 @@
 .menu {
     position: absolute;
-    right: -100vw;
     top: 48px;
+    right: -100vw;
     padding: 0 5% 15px;
     width: 90%;
     background: #ffffff;
@@ -15,14 +15,9 @@
         padding: 0;
         opacity: 1;
         text-align: right;
-        white-space: nowrap;
     }
 
     &-toggle {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
         @media (min-width: 1024px) {
             display: none;
         }
@@ -35,7 +30,7 @@
                 opacity: 1;
             }
             
-            &~ .burger {
+            &~ .navicon {
                 & span:nth-child(1) {
                     top: 5px;
                     transform: rotate(45deg);
@@ -53,7 +48,7 @@
 
     &__item {
         display: block;
-        margin-bottom: 2px;
+        margin-bottom: 5px;
         font-size: @fontMedium;
         .fontStyle;
         color: #000000;

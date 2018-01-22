@@ -31,15 +31,15 @@
 
     &__section {
         //adds blank spaces between events. The numbers are space-sizes in years. Add them to build non present spaces. E.g. 05 = 04+01
-        &--01 {
+        &__01 {
             height: 1/@timespan*100%;
         }
 
-        &--02 {
+        &__02 {
             height: 2/@timespan*100%;
         }
 
-        &--04 {
+        &__04 {
             height: 4/@timespan*100%;
         }
     }
@@ -64,6 +64,7 @@
         @media (min-width: 768px) {
             margin: 0 10px;
             width: 40%;
+            transition: 0.25s;
         }
     }
     
@@ -78,6 +79,7 @@
     &__text {
         color: #000000;
     }
+
     &__item {
         padding-right: 20px;
         font-size: @fontSmall; 
@@ -86,16 +88,11 @@
 
         &:hover {
             cursor: pointer;
-    
-            & > .event__circle {
-                box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.16);
-            }
-
         }
+        
         @media (min-width: 768px) {
             display: flex;
             padding: 5px 0;
-            width: 100%;
             height: 1/@timespan*100%;
             justify-content: center;
             background: #ffffff;

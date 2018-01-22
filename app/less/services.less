@@ -1,8 +1,12 @@
 .services {
     display: flex;
-    padding: 0 10%;
+    padding: 10% 10%;
     flex-direction: column;
     background: @lightGrey;
+
+    @media (min-width: 768px){
+        padding: 5% 10%;
+    }
 
     &-wrapper {
         display: flex;
@@ -15,7 +19,6 @@
     }
 
     &__h2 {
-        margin-top: 10%;
         text-align: center;
     }
 
