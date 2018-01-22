@@ -9,9 +9,7 @@
     opacity: 0;
 
     @media (min-width: 1024px) {
-        position: relative;
-        top: 0;
-        right: 0;
+        position: static;
         padding: 0;
         opacity: 1;
         text-align: right;
@@ -23,25 +21,29 @@
         }
     }
 
-    //checkbox hack: shows navigation and navicon
+    //checkbox hack: shows navigation and menuicon
     &-checkbox {
         &:checked {
-            &~ nav {
+            ~ nav {
                 right: 0;
                 opacity: 1;
             }
             
-            &~ .navicon {
-                & span:nth-child(1) {
-                    top: 5px;
-                    transform: rotate(45deg);
-                }
-                & span:nth-child(2) {
-                    opacity: 0;
-                }
-                & span:nth-child(3) {
-                    top: 5px;
-                    transform: rotate(-45deg);
+            ~ .menuicon {
+                .menuicon__line {
+                    &--top {
+                        top: 5px;
+                        transform: rotate(45deg);
+                    }
+
+                    &--middle {
+                        opacity: 0;
+                    }
+    
+                    &--bottom {
+                        top: 5px;
+                        transform: rotate(-45deg);
+                    }
                 }
             }
         }
@@ -64,6 +66,33 @@
         @media (min-width: 1024px) {
             display: inline-block;
             margin: 0 5px
+        }
+    }
+}
+
+//menuicon burger
+.menuicon {
+    position: relative;
+    width: 15px;
+    height: 12px;
+
+    &__line {
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        background: #000000;
+        transition: .25s ease-in-out;
+
+        &--top {
+            top: 0;   
+        }
+    
+        &--middle {
+            top: 5px;
+        }
+        
+        &--bottom {
+            top: 10px;
         }
     }
 }
