@@ -1,6 +1,7 @@
 //timespan is actually all years that are present in timeline. E.g. 2000-2010 would have a timespan of 11
 @timespan: 14;
 
+//events of the timeline
 .event {
     position: relative;
     display: flex;
@@ -12,6 +13,7 @@
         flex-direction: column;
     }
 
+    //timeline-line
     &::before{
         content:"";
         position: absolute;
@@ -29,8 +31,8 @@
         }
     }
 
+    //adds blank spaces between events. The numbers are space-sizes in years. Add them to build non present spaces. E.g. 05 = 04+01
     &__section {
-        //adds blank spaces between events. The numbers are space-sizes in years. Add them to build non present spaces. E.g. 05 = 04+01
         &__01 {
             height: 1/@timespan*100%;
         }
@@ -80,6 +82,7 @@
         color: #000000;
     }
 
+    //items in the event container
     &__item {
         padding-right: 20px;
         font-size: @fontSmall; 

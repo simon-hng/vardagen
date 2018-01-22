@@ -13,6 +13,8 @@ var text__1 = timeline.item(1);
 var text__2 = timeline.item(2);
 var text__3 = timeline.item(3);
 
+
+//deselect all events/timeline-texts
 var deselect = function(){
     item__0.classList.remove("event__item--selected");
     item__1.classList.remove("event__item--selected");
