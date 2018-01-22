@@ -30,7 +30,7 @@ deselect();
 item__0.classList.add("event__item--selected");
 text__0.classList.remove("visually-hidden");
 
-//TODO: repetetive
+//TODO: repetitive
 item__0.onclick = function(){
     deselect();
     item__0.classList.add("event__item--selected");
