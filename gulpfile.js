@@ -9,7 +9,7 @@ let plumber = require('gulp-plumber');
 let svgSprite = require("gulp-svg-sprites");
  
 gulp.task('sprites', function () {
-    return gulp.src('app/**/*.svg')
+    return gulp.src('app/images/*.svg')
         .pipe(svgSprite())
         .pipe(gulp.dest("app"));
 });
