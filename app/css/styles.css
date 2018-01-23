@@ -62,10 +62,16 @@ body {
   overflow: hidden;
 }
 .image {
-  position: relative;
-  right: 25%;
   display: block;
-  height: 100%;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .image {
+    position: relative;
+    right: 25%;
+    height: 100%;
+    width: auto;
+  }
 }
 .icon {
   margin-bottom: 15px;
