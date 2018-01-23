@@ -62,13 +62,13 @@ body {
 }
 .image {
   display: block;
+  height: 100%;
   width: 100%;
 }
 .icon {
   margin-bottom: 15px;
   width: 25px;
   height: 25px;
-  background: #ff00ff;
 }
 .h1,
 .h2 {

@@ -54,3 +54,18 @@ item__3.onclick = function(){
     item__3.classList.add("event__item--selected");
     text__3.classList.remove("visually-hidden");
 };
+
+
+/* 
+var event_item = document.getElementsByClassName("event__item");
+var timeline = document.getElementsByClassName("timeline__text");
+var item_count = event_item.length;
+var n = 0;
+
+
+//reset
+while(n < item_count){
+    text = timeline.item(n);
+    text.classList.add("visually-hidden");
+    n = n + 1;
+}; */
