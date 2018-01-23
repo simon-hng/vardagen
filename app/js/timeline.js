@@ -1,7 +1,5 @@
 var event__item = document.querySelectorAll(".event__item");
 var timeline__item = document.querySelectorAll(".timeline__text");
-console.log(event__item);
-console.log(timeline__item);
 
 //deselect all items
 var deselect = function(){
