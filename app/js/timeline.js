@@ -1,30 +1,30 @@
-var event__item = document.querySelectorAll(".event__item");
-var timeline__item = document.querySelectorAll(".timeline__text");
-var select = "event__item--selected";
-var hide = "visually-hidden";
+var items_collection = document.querySelectorAll(".event__item");
+var texts_collection = document.querySelectorAll(".timeline__text");
+var select = "event__item--selected"; //Class to highlight selected
+var hide = "visually-hidden"; //Class to hide visually
 
 
 //deselect all items
 var deselect = function(){
-    event__item.forEach(function (item){
+    items_collection.forEach(function (item){
         item.classList.remove(select);
     })
-    timeline__item.forEach(function (item){
+    texts_collection.forEach(function (item){
         item.classList.add(hide);
     })
 }
 
 //Start with event__00 and text__00
 deselect();
-event__item[0].classList.add(select);
-timeline__item[0].classList.remove(hide);
+items_collection[0].classList.add(select);
+texts_collection[0].classList.remove(hide);
 
 //toggles classes on click
-event__item.forEach(function (item, index){
+items_collection.forEach(function (item, index){
     item.addEventListener('click', function(){
         deselect();
         item.classList.add(select);
-        timeline__item[index].classList.remove(hide);
+        texts_collection[index].classList.remove(hide);
     })
 })
 
