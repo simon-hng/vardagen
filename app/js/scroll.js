@@ -1,27 +1,22 @@
-var menu__link = document.querySelectorAll(".menu__item");
-var header = document.querySelector(".header");
+const menuLink = document.querySelectorAll(".js-menu-item");
+const header = document.querySelector(".js-header");
+const menuCheckbox = document.querySelector('.js-menu-checkbox');
 
-menu__link.forEach(function (item, index){
-    item.addEventListener('click', function(a) {
-        a.preventDefault();
+menuLink.forEach(function (item, index){
+    item.addEventListener('click', function(event) {
+        event.preventDefault();
         
-        //gets headerheight
-        var headerHeight = header.offsetHeight;
-        console.log(headerHeight);
-
-        //gets targets Y-position and
-        var target = item.getAttribute("href");
-        var targetOffset = document.querySelector(target).getBoundingClientRect();
-        var targetY = targetOffset.top;
-        console.log(targetY);
-
-        //scroll
+        let headerHeight = header.offsetHeight; 
+        let target = item.getAttribute("href");
+        let targetOffset = document.querySelector(target).getBoundingClientRect();
+        let targetYPosition = targetOffset.top;
+        
         window.scrollBy({
-            top: targetY - headerHeight,
+            top: targetYPosition - headerHeight,
             behavior: 'smooth',
         });
 
-        //hides menu on mobile
-        document.querySelector('.menu-checkbox').checked = false;
-    })
-})
+        // hides menu on mobile only for checkbox hack
+        menuCheckbox.checked = false;
+    });
+});
