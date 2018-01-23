@@ -1,27 +1,30 @@
 var event__item = document.querySelectorAll(".event__item");
 var timeline__item = document.querySelectorAll(".timeline__text");
+var select = "event__item--selected";
+var hide = "visually-hidden";
+
 
 //deselect all items
 var deselect = function(){
     event__item.forEach(function (item){
-        item.classList.remove("event__item--selected");
+        item.classList.remove(select);
     })
     timeline__item.forEach(function (item){
-        item.classList.add("visually-hidden");
+        item.classList.add(hide);
     })
 }
 
 //Start with event__00 and text__00
 deselect();
-event__item[0].classList.add("event__item--selected");
-timeline__item[0].classList.remove("visually-hidden");
+event__item[0].classList.add(select);
+timeline__item[0].classList.remove(hide);
 
 //toggles classes on click
 event__item.forEach(function (item, index){
     item.addEventListener('click', function(){
         deselect();
-        item.classList.add("event__item--selected");
-        timeline__item[index].classList.remove("visually-hidden");
+        item.classList.add(select);
+        timeline__item[index].classList.remove(hide);
     })
 })
 
