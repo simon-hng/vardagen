@@ -13,6 +13,7 @@ body {
 }
 .square {
   width: 100vw;
+  overflow: hidden;
 }
 @media (min-width: 768px) {
   .square {
@@ -61,9 +62,10 @@ body {
   overflow: hidden;
 }
 .image {
+  position: relative;
+  right: 25%;
   display: block;
   height: 100%;
-  width: 100%;
 }
 .icon {
   margin-bottom: 15px;
