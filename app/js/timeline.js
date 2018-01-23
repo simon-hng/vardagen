@@ -1,4 +1,34 @@
-//timeline events
+var event__item = document.querySelectorAll(".event__item");
+var timeline__item = document.querySelectorAll(".timeline__text");
+console.log(event__item);
+console.log(timeline__item);
+
+//deselect all items
+var deselect = function(){
+    event__item.forEach(function (item){
+        item.classList.remove("event__item--selected");
+    })
+    timeline__item.forEach(function (item){
+        item.classList.add("visually-hidden");
+    })
+}
+
+//Start with event__00 and text__00
+deselect();
+event__item[0].classList.add("event__item--selected");
+timeline__item[0].classList.remove("visually-hidden");
+
+//toggles classes on click
+event__item.forEach(function (item, index){
+    item.addEventListener('click', function(){
+        deselect();
+        item.classList.add("event__item--selected");
+        timeline__item[index].classList.remove("visually-hidden");
+    })
+})
+
+
+/* //timeline events
 var event__item = document.getElementsByClassName("event__item");
 
 var item__0 = event__item.item(0);
@@ -56,7 +86,7 @@ item__3.onclick = function(){
 };
 
 
-/* 
+
 var event_item = document.getElementsByClassName("event__item");
 var timeline = document.getElementsByClassName("timeline__text");
 var item_count = event_item.length;
@@ -68,4 +98,4 @@ while(n < item_count){
     text = timeline.item(n);
     text.classList.add("visually-hidden");
     n = n + 1;
-}; */
+}; */ 
