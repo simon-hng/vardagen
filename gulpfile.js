@@ -6,6 +6,13 @@ let autoprefixPlugin = new LessPluginAutoPrefix({browsers: ["last 2 versions"]})
 let cssmin = require('gulp-cssmin');
 let rename = require('gulp-rename');
 let plumber = require('gulp-plumber');
+let svgSprite = require("gulp-svg-sprites");
+ 
+gulp.task('sprites', function () {
+    return gulp.src('app/**/*.svg')
+        .pipe(svgSprite())
+        .pipe(gulp.dest("app"));
+});
 
 gulp.task('less', function() {
     return gulp.src('app/less/styles.less') // Gets all files ending with .less in app/scss
