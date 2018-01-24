@@ -232,6 +232,7 @@ body {
   text-decoration: none;
   text-align: right;
   transition: 0.5s;
+  opacity: 1;
 }
 .menu__item:hover {
   opacity: 0.5;
