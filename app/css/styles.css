@@ -278,6 +278,12 @@ body {
     padding: 0;
   }
 }
+.timeline__content {
+  display: none;
+}
+.timeline__content.is-shown {
+  display: block;
+}
 .event {
   position: relative;
   display: -ms-flexbox;
@@ -369,10 +375,10 @@ body {
     margin-bottom: 0;
   }
 }
-.event__item--selected > .event__date {
+.event__item.is-selected > .event__date {
   color: #C71222;
 }
-.event__item--selected > .event__circle {
+.event__item.is-selected > .event__circle {
   border-color: #C71222;
 }
 .hero {
