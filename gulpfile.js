@@ -61,7 +61,7 @@ gulp.task('images', function(){
 
 //js and css
 gulp.task('useref', function(){
-    return gulp.src('app/*.html')
+    return gulp.src('app/index.html')
     .pipe(useref())
     .pipe(cssmin())
     .pipe(gulpIf('*.js', jsmin()))
@@ -73,8 +73,5 @@ gulp.task('dev', ['less', 'sprites', 'watch'], function() {
 }); 
 
 gulp.task('build', [`clean`, `less`, `useref`, `images`], function (){
-    console.log('👷🏻 Bob the builder');
-    console.log('⁉️ Can we fix it?');
-    console.log('👷🏻 Bob the builder');
-    console.log('✔️ Yes, we can!');
+    console.log('👷🏻 Bob the builder, can we fix it? Bob the builder, yes, we can!');
 })
