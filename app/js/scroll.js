@@ -1,4 +1,6 @@
 const menuLink = document.querySelectorAll(".js-menu-item");
+const menuToggle = document.querySelector(".js-menu-toggle");
+const menu = document.querySelector(".js-menu");
 const header = document.querySelector(".js-header");
 const menuCheckbox = document.querySelector('.js-menu-checkbox');
 
