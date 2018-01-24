@@ -1,14 +1,15 @@
 .services {
     display: flex;
-    padding: 10% 10%;
+    padding: 10%;
     flex-direction: column;
     background: @lightGrey;
+    text-align: center;
 
     @media (min-width: 768px){
         padding: 5% 10%;
     }
 
-    &-wrapper {
+    &__wrapper {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -19,21 +20,18 @@
         }
     }
 
-    &__h2 {
-        text-align: center;
-    }
-
-    &__copy {
-        @media (min-width: 768px) {
-            padding-right: 5px;
-        }
-    }
-    
     &__item {
         padding: 10% 0;
+        text-align: left;
 
         @media (min-width: 768px) {
             padding: 5% 0;
+        }
+    }
+    
+    &__copy {
+        @media (min-width: 768px) {
+            padding-right: 5px;
         }
     }
 }

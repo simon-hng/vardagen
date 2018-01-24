@@ -14,13 +14,13 @@
     &::before{
         content:"";
         position: absolute;
+        top: 0;
         left: 0;
         border-bottom: solid 2px @darkGrey;
         width: 100%;
         height: 46px;
 
         @media (min-width: 768px) {
-            top: 0;
             border-right: solid 3px @darkGrey;
             border-bottom: none;
             width: 49.7%;
@@ -69,10 +69,7 @@
         font-size: @fontSmall; 
         .fontStyle;
         align-items: center;
-
-        &:hover {
-            cursor: pointer;
-        }
+        cursor: pointer;
 
         @media (min-width: 768px) {
             display: flex;
@@ -82,7 +79,7 @@
             background: #ffffff;
             z-index: 10;
 
-            &--last {
+            &:last-child {
                 margin-bottom: 0;
             }
         }
@@ -91,6 +88,7 @@
             & > .event__date {
                 color: @red;
             }
+            
             & > .event__circle {
                 border-color: @red;
             }
