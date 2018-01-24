@@ -10,34 +10,36 @@ let svgSprite = require("gulp-svg-sprites");
  
 gulp.task('sprites', function () {
     return gulp.src('app/images/*.svg')
-        .pipe(svgSprite())
+        .pipe(svgSprite({mode: "symbols"}))
         .pipe(gulp.dest("app"));
 });
 
 gulp.task('less', function() {
     return gulp.src('app/less/styles.less') // Gets all files ending with .less in app/scss
-    .pipe(plumber())  
-    .pipe(less({
-          plugins: [autoprefixPlugin]
-      }))
-      .pipe(gulp.dest('app/css'))
-      .pipe(browserSync.reload({
-        stream: true}))
-      .pipe(cssmin())
-      .pipe(rename({suffix: '.min'}))
-      .pipe(gulp.dest('dist/css'));
-  });
+        .pipe(plumber())  
+        .pipe(less({
+            plugins: [autoprefixPlugin]
+        }))
+
+        .pipe(gulp.dest('app/css'))
+        .pipe(browserSync.reload({
+            stream: true}))
+        .pipe(cssmin())
+        .pipe(rename({suffix: '.min'}))
+        .pipe(gulp.dest('dist/css'));
+});
 
 gulp.task('watch', ['browserSync'], function (){
     gulp.watch('app/less/**/*.less', ['less']); 
     gulp.watch('app/*.html', browserSync.reload); 
+    gulp.watch('app/js/*.js', browserSync.reload); 
     // Other watchers
-    })
+});
 
 gulp.task('browserSync', function() {
     browserSync.init({
         server: {
-        baseDir: 'app'
-    },
-})
-})
+            baseDir: 'app'
+        }
+    });
+});
