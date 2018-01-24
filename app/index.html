@@ -58,7 +58,7 @@
     <header class="header js-header">
         <h2 class="header__item logo">Company Name</h2>
         <input type="checkbox" class="menu-checkbox js-menu-checkbox visually-hidden" id="menu-toggle">
-        <label for="menu-toggle" class="menu-toggle menuicon">
+        <label for="menu-toggle" class="menu-toggle menuicon" aria-label="open menu">
             <div class="menuicon__line menuicon__line--top"></div>
             <div class="menuicon__line menuicon__line--middle"></div>
             <div class="menuicon__line menuicon__line--bottom"></div>
@@ -242,16 +242,16 @@
             <div class="square__inner">
                 <h2 class="h2">Contact Us</h2>
                 <form class="form">
-                    <input class="input" placeholder="Name" type="text">
-                    <input class="input" placeholder="Email" type="email">
+                    <input class="input" placeholder="Name" type="text" aria-label="name">
+                    <input class="input" placeholder="Email" type="email" aria-label="mail">
                     <div class="form-wrapper">
-                        <textarea class="textarea" placeholder="Message"></textarea>
-                        <input class="button button--submit" type="submit" value="Contact Us">
+                        <textarea class="textarea" placeholder="Message" aria-label="message"></textarea>
+                        <input class="button button--submit" type="submit" value="Contact Us" aria-label="submit">
                     </div>
                 </form>
             </div>
         </div>
-       <iframe class="square col-50 gmaps" tabindex="-1" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d396721.30209195416!2d125.46191648487552!3d39.029336537205005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357e02dae64f4337%3A0xd40677e21771aa95!2sPj%C3%B6ngjang%2C+Nordkorea!5e0!3m2!1sde!2sde!4v1516281561576"
+       <iframe class="square col-50 gmaps" aria-hidden="true" tabindex="-1" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d396721.30209195416!2d125.46191648487552!3d39.029336537205005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357e02dae64f4337%3A0xd40677e21771aa95!2sPj%C3%B6ngjang%2C+Nordkorea!5e0!3m2!1sde!2sde!4v1516281561576"
             width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
     </section>
 </body>
