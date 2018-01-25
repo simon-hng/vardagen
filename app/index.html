@@ -49,13 +49,13 @@
     <header class="header js-header" role="banner">
         <h2 class="col-50 logo">Company Name</h2>
         <input type="checkbox" class="menu-checkbox js-menu-checkbox visually-hidden" id="menu-toggle">
-        <label for="menu-toggle" class="menu-toggle menuicon" role="button">
+        <label for="menu-toggle" class="js-aria-toggle menu-toggle menuicon" role="button">
             <a class="visually-hidden">open menu</a>
             <div class="menuicon__line menuicon__line--top"></div>
             <div class="menuicon__line menuicon__line--middle"></div>
             <div class="menuicon__line menuicon__line--bottom"></div>
         </label>
-        <nav class="col-50 menu" role="navigation">
+        <nav class="col-50 menu" role="navigation" aria-expanded="true">
             <a href="#home" class="menu__item js-menu-item" role="menuitem">Home</a>
             <a href="#about" class="menu__item js-menu-item" role="menuitem">About Us</a>
             <a href="#services" class="menu__item js-menu-item" role="menuitem">Services</a>
@@ -243,13 +243,14 @@
                 </form>
             </div>
         </div>
-       <iframe class="square col-50 gmaps" aria-hidden="true" tabindex="-1" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d396721.30209195416!2d125.46191648487552!3d39.029336537205005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357e02dae64f4337%3A0xd40677e21771aa95!2sPj%C3%B6ngjang%2C+Nordkorea!5e0!3m2!1sde!2sde!4v1516281561576"
-            height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+       <!-- <iframe class="square col-50 gmaps" aria-hidden="true" tabindex="-1" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d396721.30209195416!2d125.46191648487552!3d39.029336537205005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357e02dae64f4337%3A0xd40677e21771aa95!2sPj%C3%B6ngjang%2C+Nordkorea!5e0!3m2!1sde!2sde!4v1516281561576"
+            height="450" frameborder="0" style="border:0" allowfullscreen></iframe> -->
     </section>
 
     <!--build:js js/main.min.js -->
     <script src="js/timeline.js"></script>
     <script src="js/scroll.js"></script>
+    <script src="js/aria-expanded.js"></script>
     <!-- endbuild -->
 </body>
 </html>
