@@ -236,6 +236,7 @@ body {
 }
 .menu__item:hover {
   opacity: 0.5;
+  transform: translateY(-5px);
 }
 @media (min-width: 1024px) {
   .menu__item {
@@ -360,6 +361,10 @@ body {
   -ms-flex-align: center;
       align-items: center;
   cursor: pointer;
+  transition-duration: 1s;
+}
+.event__item :hover {
+  transform: translateX(10px);
 }
 @media (min-width: 768px) {
   .event__item {
