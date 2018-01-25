@@ -239,8 +239,11 @@ body {
 }
 @media (min-width: 1024px) {
   .menu__item {
-    margin: 0 5px;
+    margin: 0 8px;
   }
+}
+.menu :last-child {
+  margin-right: 0;
 }
 .menuicon {
   position: relative;
