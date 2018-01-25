@@ -363,9 +363,6 @@ body {
   cursor: pointer;
   transition-duration: 1s;
 }
-.event__item :hover {
-  transform: translateX(10px);
-}
 @media (min-width: 768px) {
   .event__item {
     display: -ms-flexbox;
