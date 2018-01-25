@@ -119,13 +119,13 @@ body {
   position: relative;
 }
 .form__wrapper {
-  border-bottom: solid 2px #ffffff;
+  border-bottom: 2px solid #ffffff;
   text-align: right;
 }
 .input {
   margin-bottom: 10px;
   border: none;
-  border-bottom: solid 2px currentColor;
+  border-bottom: 2px solid currentColor;
   padding: 8px 0;
   width: 100%;
   font-family: 'Roboto', sans-serif;
@@ -169,10 +169,8 @@ body {
   z-index: 100;
   -ms-flex-align: center;
       align-items: center;
-}
-.header__item {
-  -ms-flex: 1 50%;
-      flex: 1 50%;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
 }
 @media (min-width: 1024px) {
   .header {
@@ -300,13 +298,13 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  border-bottom: solid 2px #D8D8D8;
+  border-bottom: 2px solid #D8D8D8;
   width: 100%;
   height: 46px;
 }
 @media (min-width: 768px) {
   .event::before {
-    border-right: solid 3px #D8D8D8;
+    border-right: 3px solid #D8D8D8;
     border-bottom: none;
     width: 49.7%;
     height: 100%;
@@ -315,7 +313,7 @@ body {
 .event__circle {
   position: relative;
   top: 0;
-  border: solid 2px #D8D8D8;
+  border: 2px solid #D8D8D8;
   border-radius: 50%;
   width: 10px;
   height: 10px;
@@ -324,7 +322,7 @@ body {
 }
 @media (min-width: 768px) {
   .event__circle {
-    border: solid 3px #D8D8D8;
+    border: 3px solid #D8D8D8;
   }
 }
 @media (min-width: 768px) {
