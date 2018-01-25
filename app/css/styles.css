@@ -345,7 +345,7 @@ body {
   color: #000000;
 }
 .event__item {
-  padding-right: 20px;
+  margin-right: 20px;
   font-size: 13px;
   font-family: 'Roboto', sans-serif;
   font-weight: lighter;
@@ -357,7 +357,7 @@ body {
   .event__item {
     display: -ms-flexbox;
     display: flex;
-    margin-bottom: 50px;
+    margin: 0 0 50px;
     padding: 5px 0;
     -ms-flex-pack: center;
         justify-content: center;
@@ -416,12 +416,12 @@ body {
   }
 }
 .services__item {
-  padding: 10% 0;
+  margin: 10% 0;
   text-align: left;
 }
 @media (min-width: 768px) {
   .services__item {
-    padding: 5% 0;
+    margin: 5% 0;
   }
 }
 @media (min-width: 768px) {
