@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="language" content="english">
+    <meta name="theme-color" content="#C71222">
 
     <!-- build:css css/styles.min.css -->
     <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
@@ -43,20 +45,22 @@
         </symbol>
     </svg>
 
-    <header class="header js-header">
+    <a href="#home" class="visually-hidden">go to main content</a>
+    <header class="header js-header" role="banner">
         <h2 class="col-50 logo">Company Name</h2>
         <input type="checkbox" class="menu-checkbox js-menu-checkbox visually-hidden" id="menu-toggle">
-        <label for="menu-toggle" class="menu-toggle menuicon" aria-label="open menu">
+        <label for="menu-toggle" class="menu-toggle menuicon" role="button">
+            <a class="visually-hidden">open menu</a>
             <div class="menuicon__line menuicon__line--top"></div>
             <div class="menuicon__line menuicon__line--middle"></div>
             <div class="menuicon__line menuicon__line--bottom"></div>
         </label>
-        <nav class="col-50 menu">
-            <a href="#home" class="menu__item js-menu-item">Home</a>
-            <a href="#about" class="menu__item js-menu-item">About Us</a>
-            <a href="#services" class="menu__item js-menu-item">Services</a>
-            <a href="#jobs" class="menu__item js-menu-item">Jobs</a>
-            <a href="#contact" class="menu__item js-menu-item">Contact Us</a>
+        <nav class="col-50 menu" role="navigation">
+            <a href="#home" class="menu__item js-menu-item" role="menuitem">Home</a>
+            <a href="#about" class="menu__item js-menu-item" role="menuitem">About Us</a>
+            <a href="#services" class="menu__item js-menu-item" role="menuitem">Services</a>
+            <a href="#jobs" class="menu__item js-menu-item" role="menuitem">Jobs</a>
+            <a href="#contact" class="menu__item js-menu-item" role="menuitem">Contact Us</a>
         </nav>
     </header>
 
