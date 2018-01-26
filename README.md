@@ -3,21 +3,21 @@
 Template produced during internship at SinnerSchrader Hamburg.
 
 ## Getting Started
-
-* mkdir Vardagen
-* cd Vardagen
-* git pull https://github.com/simonh9134/vardagen.git
-* npm install
-
+```sh
+$ mkdir Vardagen
+git clone https://github.com/simonh9134/vardagen.git
+npm install
+```
 ### Installing
-
-* cd Vardagen
-* gulp dev
+```sh
+$ gulp dev
+```
 
 ## Deployment
-
-* cd Vardagen
-* gulp build
+```sh
+$ cd Vardagen
+gulp build
+```
 
 ## Built With
 
