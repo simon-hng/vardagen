@@ -9,8 +9,9 @@ let svgSprite = require("gulp-svg-sprites");
 let useref = require('gulp-useref');
 let gulpIf = require('gulp-if');
 let jsmin = require('gulp-jsmin');
-var imagemin = require('gulp-imagemin');
+let imagemin = require('gulp-imagemin');
 let del = require('del');
+let runSequence = require('run-sequence');
 
 gulp.task('less', function() {
     return gulp.src('app/less/styles.less')
@@ -68,10 +69,10 @@ gulp.task('useref', function(){
     .pipe(gulp.dest('dist'))
 });
 
-gulp.task('dev', ['less', 'sprites', 'watch'], function() {
-    console.log('🐜 Oh boy, here I go building again');
-}); 
+gulp.task('dev', function(callback) {
+    runSequence('less', 'sprites', 'watch', callback);
+  });
 
-gulp.task('build', [`clean`, `less`, `useref`, `images`], function (){
-    console.log('👷🏻 Bob the builder, can we fix it? Bob the builder, yes, we can!');
-})
+gulp.task('build', function(callback) {
+    runSequence(`clean`, `less`, `useref`, 'images', callback);
+  });
